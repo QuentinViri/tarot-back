@@ -14,6 +14,9 @@ public class Score {
     @OneToOne
     private Round round;
 
-    private Integer number;
+    private Integer points;
+
+    private EAnnouncement eAnnouncement;
+
 
 }

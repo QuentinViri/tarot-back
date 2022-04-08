@@ -13,9 +13,18 @@ public class Round {
     @JoinColumn(name = "game")
     private Game game;
 
+    @OneToMany
     private List<Score> scores;
 
+    @OneToOne
     private Player taker;
+
+    @OneToOne
+    private Player called;
+
+    @ManyToOne
+    private List<EDeclaration> eDeclarations;
+
 
 
 
