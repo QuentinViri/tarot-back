@@ -1,9 +1,12 @@
 package com.example.tarotback.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Data
 public class Round {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,18 +17,19 @@ public class Round {
     private Game game;
 
     @OneToMany
+    @JoinColumn(name = "scores")
     private List<Score> scores;
 
     @OneToOne
+    @JoinColumn(name = "taker")
     private Player taker;
 
     @OneToOne
+    @JoinColumn(name = "called")
     private Player called;
 
-    @ManyToOne
-    private List<EDeclaration> eDeclarations;
-
-
-
+    @OneToMany
+    @JoinColumn(name = "declarations")
+    private List<Declaration> declarations;
 
 }

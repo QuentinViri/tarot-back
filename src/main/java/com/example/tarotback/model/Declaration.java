@@ -1,25 +1,18 @@
 package com.example.tarotback.model;
 
 import lombok.Data;
+import org.apache.logging.log4j.message.StringFormattedMessage;
 
 import javax.persistence.*;
 
 @Entity
 @Data
-public class Score {
+public class Declaration {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
-    private Player player;
-
-    @OneToOne
-    private Round round;
-
-    private Integer points;
-
-    private EAnnouncement eAnnouncement;
-
-
+    @Enumerated(EnumType.STRING)
+    private EDeclaration eDeclaration;
 }

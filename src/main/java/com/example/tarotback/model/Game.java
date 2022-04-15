@@ -1,5 +1,7 @@
 package com.example.tarotback.model;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
+@Data
 public class Game {
 
     @Id
