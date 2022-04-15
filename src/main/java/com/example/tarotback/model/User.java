@@ -1,5 +1,7 @@
 package com.example.tarotback.model;
 
+import lombok.Data;
+
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.*;
@@ -8,6 +10,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
+@Data
 @Table(	name = "users",
         uniqueConstraints = {
                 @UniqueConstraint(columnNames = "username"),
