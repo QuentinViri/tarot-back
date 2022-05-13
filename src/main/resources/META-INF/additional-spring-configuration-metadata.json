@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "tarotback.secret",
+      "type": "java.lang.String",
+      "description": "Description for tarotback.secret."
+  }
+] }
